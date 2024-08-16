@@ -14,9 +14,9 @@ app.use(express.json())
 app.use(cors())
 const db = module.exports = async()=> {
     try{
-        await mongoose.connect("mongodb+srv://sapnatandel19:<password>@iconnect.hf5kflu.mongodb.net/?retryWrites=true&w=majority&appName=iconnect",{
-            user : sapnatandel19,
-            pass : wDgjvVrTbFsEwfOG
+        await mongoose.connect(process.env.MONGODBURL,{
+            user :process.env.DBUSER, 
+            pass : process.env.DBPASS
         })
         console.log("MongoDB Connection is successful")
     }catch(e){

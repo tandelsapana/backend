@@ -21,3 +21,5 @@ const EnquiryModel = mongoose.model('Enquiry',EnquirySchema)
 
 
 module.exports = EnquiryModel
+
+
